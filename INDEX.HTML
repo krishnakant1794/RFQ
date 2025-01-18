@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFQ Management for Heavy Industries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>RFQ Management for Heavy Industries</h1>
+        <nav>
+            <ul>
+                <li><a href="#create-rfq">Create RFQ</a></li>
+                <li><a href="#track-rfq">Track RFQ</a></li>
+                <li><a href="#vendor-responses">Vendor Responses</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="create-rfq">
+        <h2>Create Request for Quotation (RFQ)</h2>
+        <form id="rfq-form">
+            <label for="rfq-title">RFQ Title:</label>
+            <input type="text" id="rfq-title" required>
+
+            <label for="rfq-description">RFQ Description:</label>
+            <textarea id="rfq-description" required></textarea>
+
+            <label for="rfq-deadline">Deadline:</label>
+            <input type="date" id="rfq-deadline" required>
+
+            <button type="submit">Generate RFQ</button>
+        </form>
+    </section>
+
+    <section id="track-rfq">
+        <h2>Track RFQ Status</h2>
+        <form id="track-rfq-form">
+            <label for="rfq-id">RFQ ID:</label>
+            <input type="text" id="rfq-id" required>
+            <button type="submit">Track Status</button>
+        </form>
+        <div id="rfq-status"></div>
+    </section>
+
+    <section id="vendor-responses">
+        <h2>Vendor Responses</h2>
+        <table id="vendor-table">
+            <thead>
+                <tr>
+                    <th>Vendor Name</th>
+                    <th>Response Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Vendor responses will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 RFQ Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
